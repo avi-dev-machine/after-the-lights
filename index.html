@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#18221D">
+    <meta name="description" content="A personal diary of Pujo, people, and things left unsaid.">
+    <title>After the Lights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500&family=Literata:opsz,wght@7..72,400;7..72,500&family=Noto+Serif+Bengali:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="cover" id="cover" aria-labelledby="site-title">
+        <img class="cover-image" src="landing.png" alt="A Durga Puja pandal glowing above a crowd in Kolkata">
+        <button class="sound-toggle" id="sound-toggle" type="button" aria-label="Turn background music on" title="Turn background music on" aria-pressed="false">
+          <svg class="sound-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+            <path class="sound-wave" d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+            <path class="sound-wave" d="M19 5a10 10 0 0 1 0 14"></path>
+            <path class="sound-muted" d="m16 9 5 6m0-6-5 6"></path>
+          </svg>
+        </button>
+        <div class="cover-content">
+          <p class="eyebrow">A collection of eleven poems</p>
+          <h1 id="site-title">After the Lights</h1>
+          <p class="subtitle">A personal diary of Pujo, people, and things left unsaid.</p>
+          <span class="cover-rule" aria-hidden="true"></span>
+          <button class="text-link" id="begin-reading" type="button">Begin reading <span aria-hidden="true">→</span></button>
+        </div>
+        <p class="cover-footnote">Written with love, longing, and all the things left unsaid — Avijnan</p>
+      </section>
+
+      <section class="reader" id="reader" aria-label="Poem reader" hidden>
+        <header class="reader-header">
+          <a class="collection-mark" href="#cover" id="cover-link" aria-label="Return to the opening screen">After the Lights</a>
+          <p class="reader-subtitle">A personal diary of Pujo, people, and things left unsaid.</p>
+          <button class="sound-toggle" id="reader-sound-toggle" type="button" aria-label="Turn background music on" title="Turn background music on" aria-pressed="false">
+            <svg class="sound-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M11 5 6 9H3v6h3l5 4V5Z"></path>
+              <path class="sound-wave" d="M15.5 8.5a5 5 0 0 1 0 7"></path>
+              <path class="sound-wave" d="M19 5a10 10 0 0 1 0 14"></path>
+              <path class="sound-muted" d="m16 9 5 6m0-6-5 6"></path>
+            </svg>
+          </button>
+        </header>
+
+        <article class="poem" aria-live="polite" aria-atomic="true">
+          <h2 class="poem-title" id="poem-title" tabindex="-1"></h2>
+          <div class="poem-scroll" id="poem-scroll" tabindex="0" aria-label="Poem text">
+            <p class="poem-body" id="poem-body"></p>
+          </div>
+        </article>
+
+        <footer class="reader-footer">
+          <nav class="poem-navigation" aria-label="Poem navigation">
+            <button class="nav-button" id="previous-poem" type="button" aria-label="Previous poem">← <span>Previous</span></button>
+            <button class="nav-button" id="next-poem" type="button" aria-label="Next poem"><span>Next</span> →</button>
+          </nav>
+          <p class="closing-note" id="closing-note" hidden>
+            Some things are easier to keep in words.
+            <button class="text-link read-again" id="read-again" type="button">Read again <span aria-hidden="true">↗</span></button>
+          </p>
+        </footer>
+      </section>
+      <audio id="background-music" src="Bangla%20Music.mp3" preload="none" loop aria-hidden="true"></audio>
+    </main>
+    <p class="load-error" id="load-error" role="alert" hidden>These poems could not be loaded. Please open this page through a local web server.</p>
+  </body>
+</html>
